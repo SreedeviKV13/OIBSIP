@@ -1,0 +1,361 @@
+:root {
+  --bg: #F1ECE3;
+  --bg-alt: #E7DFD1;
+  --ink: #1C1A17;
+  --blue: #2F4858;
+  --sand: #D9B382;
+  --taupe: #8C7A66;
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Manrope", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+h1 { font-size: 4.2rem; }
+h2 { font-size: 2.4rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1.15rem; font-weight: 600; font-family: var(--font-body); margin-bottom: 0.4rem; }
+
+p { max-width: 60ch; }
+
+a { color: inherit; }
+
+section {
+  padding: 6rem 8vw;
+}
+
+/* ---------- Nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(241, 236, 227, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(28, 26, 23, 0.1);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 8vw;
+}
+
+.nav__brand {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav__links {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.nav__links a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease;
+}
+
+.nav__links a:hover {
+  border-color: var(--blue);
+}
+
+.nav__cta {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  background: var(--blue);
+  color: var(--bg);
+  border-radius: 2px;
+}
+
+.nav__cta:hover {
+  background: #23394A;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.9rem;
+  border-radius: 2px;
+}
+
+.button--primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.button--primary:hover {
+  background: var(--blue);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+  max-width: 50rem;
+}
+
+.hero h1 {
+  margin-bottom: 1.6rem;
+}
+
+.hero__subhead {
+  font-size: 1.15rem;
+  color: rgba(28, 26, 23, 0.75);
+  margin-bottom: 2.4rem;
+}
+
+/* ---------- Collection ---------- */
+.collection {
+  background: var(--bg-alt);
+}
+
+.collection__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.collection__header p {
+  color: rgba(28, 26, 23, 0.65);
+}
+
+.collection__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.lookbook-card__image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+  background: var(--taupe);
+}
+
+.lookbook-card p {
+  font-size: 0.88rem;
+  color: rgba(28, 26, 23, 0.65);
+}
+
+/* ---------- Story / pull quote ---------- */
+.story__inner {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story__eyebrow-text {
+  font-size: 0.9rem;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+}
+
+.pull-quote {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0 auto 2rem;
+  max-width: 38rem;
+}
+
+.story__body {
+  margin: 0 auto 1.5rem;
+  color: rgba(28, 26, 23, 0.75);
+}
+
+.story__signature {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* ---------- Press ---------- */
+.press__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.press__quote p {
+  font-size: 1.02rem;
+  margin-bottom: 1rem;
+  color: rgba(28, 26, 23, 0.85);
+}
+
+.press__quote cite {
+  font-style: normal;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--taupe);
+  font-weight: 600;
+}
+
+/* ---------- Waitlist band ---------- */
+.waitlist {
+  text-align: center;
+  background: var(--blue);
+  color: var(--bg);
+}
+
+.waitlist h2 {
+  color: var(--bg);
+  margin-bottom: 1rem;
+}
+
+.waitlist p {
+  margin: 0 auto 2rem;
+  color: rgba(241, 236, 227, 0.8);
+}
+
+.waitlist .button--primary {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.waitlist .button--primary:hover {
+  background: var(--sand);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--ink);
+  color: rgba(241, 236, 227, 0.85);
+  padding: 4rem 8vw 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--bg);
+  margin-bottom: 0.6rem;
+}
+
+.footer__brand p {
+  font-size: 0.9rem;
+  max-width: 26ch;
+}
+
+.footer__links {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer__links h4 {
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  color: var(--bg);
+  font-family: var(--font-body);
+}
+
+.footer__links a {
+  display: block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: rgba(241, 236, 227, 0.75);
+}
+
+.footer__copyright {
+  width: 100%;
+  font-size: 0.8rem;
+  color: rgba(241, 236, 227, 0.5);
+  margin-top: 2rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  section {
+    padding: 3.5rem 6vw;
+  }
+
+  .nav {
+    padding: 1rem 6vw;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav__links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav__cta {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .pull-quote {
+    font-size: 1.5rem;
+  }
+
+  .collection__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .press__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
