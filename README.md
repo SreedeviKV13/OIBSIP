@@ -1,4 +1,4 @@
-# OIBSIP
+
 # Isolde — Fashion & Lifestyle Landing Page
 
 **OIBSIP Web Development Track — Level 1, Task 1**
